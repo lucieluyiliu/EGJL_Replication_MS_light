@@ -13,9 +13,11 @@ for j=1:Ns
   BB(j) = B(Ns+1-j);  
 end
 
-[~,~,jmin,jmax,FA] = Elasticity(BA,Ns,smin,smax,jdelfit,jdel,order);
-[~,~,~,~,FB] = Elasticity(BB,Ns,smin,smax,jdelfit,jdel,order);
+[~,~,jmin,jmax,HA] = Elasticity(BA,Ns,smin,smax,jdelfit,jdel,order);
+[~,~,~,~,HB] = Elasticity(BB,Ns,smin,smax,jdelfit,jdel,order);
 
 for j=jmin:jmax
-  Corr(j) = (FB(j)-FA(j)+rho*(1-FA(j)*FB(j)))/sqrt((1-2*rho*FA(j)+FA(j)*FA(j))*(1+2*rho*FB(j)+FB(j)*FB(j)));
+  FA(j) = HA(j)/(1-HA(j));
+  FB(j) = HB(j)/(1+HB(j));
+  Corr(j) = (FA(j)-FB(j)+rho*(1-FA(j)*FB(j)))/sqrt((1+2*rho*FA(j)+FA(j)*FA(j))*(1-2*rho*FB(j)+FB(j)*FB(j)));
 end

@@ -17,7 +17,7 @@ for j=jmin:jmax
     p = polyfix(s(j-jdelfit:j+jdelfit),B(j-jdelfit:j+jdelfit),order,[s(j)],[B(j)]);
     BFit = polyval(p,s);
     BprimeFit(j) = (BFit(j+jdel)-BFit(j-jdel))/(2*jdel*ds);
-    F(j) = -s(j)*(1-s(j))*BprimeFit(j)/BFit(j);
+    F(j) = s(j)*(1-s(j))*BprimeFit(j)/BFit(j);
 end
 
 %This numerically computes the derivative of the boundary from +/- jdel
