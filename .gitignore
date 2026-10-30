@@ -6,3 +6,13 @@ renv/library/
 renv/staging/
 .venv/
 Data/DataFile.mat
+# Files written by the WRDS data build (code/python); not shipped, see README Data vintage
+Data/CS.parquet
+Data/FF48_map.csv
+Data/PROB.parquet
+Data/_main_data_2.parquet
+Data/_ret_quarterly_2.parquet
+Data/iclink.pkl
+Data/raw_data.parquet
+Data/sigma.parquet
+Data/sp500.csv

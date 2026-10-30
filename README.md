@@ -73,7 +73,7 @@ source.
 
 ### Data vintage
 WRDS revises its databases continuously, so a fresh download does not return exactly the data
-behind the paper. The WRDS extracts are frozen as of the build run of 30 September 2026 that
+behind the paper. The WRDS extracts are frozen as of the build run of 31 October 2026 that
 produced the results in the paper. The package ships the series built from this vintage, together
 with the code that rebuilds every extract from WRDS (`code/python/`, "how the data were prepared"
 in Section 5). Researchers with WRDS access can rerun that code; results from a later vintage can
@@ -458,10 +458,10 @@ All empirical exhibits are produced by `code/r/main_empirics.Rmd` (run via `mast
 - The pre-shipped `output/tables` and `output/figures` are the paper's exact exhibits; reproduction
   should overwrite them with identical content.
 - The log files in `output/log/` record our runs: `step1_build.log` is the WRDS build of
-  30 September 2026 that wrote the frozen extracts; `master_R.log` is the run of
+  31 October 2026 that wrote the frozen extracts; `master_R.log` is the run of
   `master.R` with the bootstrap (`python run_all.py --bootstrap`) on the shipped data, which
   re-estimated the bootstrap standard errors and produced every empirical exhibit in `output/`;
-  `matlab_run.log` is the full solve of 20 September 2026 (`RECOMPUTE = true`) that produced the
+  `matlab_run.log` is the full solve of 30 October 2026 (`RECOMPUTE = true`) that produced the
   theory exhibits. The default run (`python run_all.py`) repeats the full solve and reads the shipped
   bootstrap estimates, and reproduces the same exhibits.
 - **Running the code overwrites these log files.** `main.m` replaces `matlab_run.log`, `master.R`
