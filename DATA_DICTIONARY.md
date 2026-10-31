@@ -2,8 +2,8 @@
 
 This file lists the variables used in the paper, for every dataset the code reads or writes under
 `Data/`, with the names used in the code and the files. Section 1 covers the files in the package;
-Sections 2 and 3 describe the files the Python data build reads and writes, which are available
-on request (see `README.md`, Section 2, for sources and provenance). Columns of a file that are
+Sections 2 and 3 describe the files the Python data build reads and writes, which are not in the
+package (see `README.md`, Section 2, for sources and provenance). Columns of a file that are
 not listed are not used by the code. Definitions of the firm variables follow Table OA.3 of the
 Online Appendix.
 
